@@ -3,7 +3,7 @@ const painters = [{
         id: 1,
         name: 'Vincent Van Gogh',
         country: 'Netherlands',
-        img: 'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_700/https://blog.konusarakogren.com/wp-content/uploads/2020/07/8472392-3x2-700x467-1.jpg',
+        img: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/vincent-van-gogh-digital-remastered-edition-john-peter-russell.jpg',
         text: 'he was born in the Netherlands in 1853. In his youth, he did various jobs from teaching to missionary. Influenced by the Impressionist movement, he made paintings filled with vivid colors. With its unique style, it has announced its name in a short time. He gave his known works in the last decade of his life. in 1888, after his friendship with the painter Paul Gaugin broke down, he cut off part of his left ear and committed suicide as a result of his deteriorating mood. He was considered one of the pioneers of Impressionism and was born in the 20th century. Dec is a name that almost everyone hears among the world-famous painters.'
     },
     {
@@ -45,14 +45,14 @@ const painters = [{
 
 // Get the Elements
 
-const img = document.getElementById('#card-foto');
-const painter = document.getElementById('#card-title');
-const country = document.getElementById('#card-country');
-const info = document.getElementById('#card-text');
+const img = document.querySelector('#person-img');
+const painter = document.querySelector('.painter');
+const country = document.querySelector('.country');
+const info = document.querySelector('.text');
 // const after = document.querySelector(".image-container::after");
 // const after = document.querySelector(".image-container");
 
-const prevBtn = document.querySelector('.previus-btn');
+const previusBtn = document.querySelector('.previus-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 
@@ -88,7 +88,7 @@ nextBtn.addEventListener('click', function() {
 });
 
 // Show the previous person
-prevBtn.addEventListener('click', function() {
+previusBtn.addEventListener('click', function() {
     currentItem--;
     if (currentItem < 0) {
         currentItem = painters.length - 1;
